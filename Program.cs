@@ -7,7 +7,7 @@ namespace DiscDL
     public class DiscDL
     {
         private static string Token = ""; // xhr message token 
-        private static string ChannelID = "429764371242024961";
+        private static string ChannelID = "875479368984576040";
         private static string LastMsgID = ""; // stay EMPTY !
         public static string Save_dir_name = @"/img"; // path where save 
         private static int nb = 0;
@@ -41,9 +41,6 @@ namespace DiscDL
                 string responseFromServer = reader.ReadToEnd();
 
                 jArray = JArray.Parse(responseFromServer);
-                File.WriteAllText(Environment.CurrentDirectory.ToString() + Save_dir_name + "/log.json", jArray.ToString());
-                Console.WriteLine(jArray.Count());
-
                 Root getID = JsonConvert.DeserializeObject<Root>(jArray[jArray.Count() - 1].ToString());
                 LastMsgID = getID.id;
                 await debutAsync(jArray, jArray.Count());
