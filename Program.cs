@@ -4,12 +4,12 @@ using Newtonsoft.Json.Linq;
 #pragma warning disable SYSLIB0014
 namespace DiscDL
 {
-    public class WebRequestGetExample
+    public class DiscDL
     {
-        private static string Token = "";
+        private static string Token = ""; // xhr message token 
         private static string ChannelID = "429764371242024961";
-        private static string LastMsgID = "";
-        public static string Save_dir_name = @"/img";
+        private static string LastMsgID = ""; // stay EMPTY !
+        public static string Save_dir_name = @"/img"; // path where save 
         private static int nb = 0;
         private static WebResponse? response;
         private static JArray? jArray;
